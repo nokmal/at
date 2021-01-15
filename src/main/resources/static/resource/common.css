@@ -1,4 +1,4 @@
-@charset "UTF-8"; 
+@charset "UTF-8";
 
 html {
 	/* 영문이면 roboto가 적용되고, 한글이면 Noto Sans KR가 적용되도록 아래와 같은 순서로 배치 */
@@ -42,6 +42,20 @@ label[for] {
 	border: 1px solid black;
 	padding: 10px;
 	text-align: left;
+}
+
+/* 폼 관련 라이브러리 */
+.form1 .form-control-box>input, .form1 .form-control-box>textarea {
+	width: 100%;
+	padding: 0;
+	display: block;
+	box-sizing: border-box;
+	padding: 10px;
+}
+
+.form1 .form-control-box>textarea {
+	min-height: 300px;
+	resize: none;
 }
 /* 커스텀 */
 .con {
