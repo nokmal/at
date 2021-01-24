@@ -57,3 +57,25 @@ loginPw = SHA2('admin', 256),
 `nickname` = '관리자',
 `email` = '',
 `phoneNo` = '';
+
+# article 테이블 세팅
+CREATE TABLE articleReply (
+    id INT(10) UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    regDate DATETIME,
+    updateDate DATETIME,
+    memberId INT(10) UNSIGNED NOT NULL,
+    articleId INT(10) UNSIGNED NOT NULL,
+    delDate DATETIME,
+	delStatus TINYINT(1) UNSIGNED NOT NULL DEFAULT 0,
+	displayStatus TINYINT(1) UNSIGNED NOT NULL DEFAULT 0,
+    `body` LONGTEXT NOT NULL
+);
+
+# articleReply 테이블에 테스트 데이터 삽입
+INSERT INTO articleReply
+SET regDate = NOW(),
+updateDate = NOW(),
+memberId = 1,
+articleId = 1,
+displayStatus = 1,
+`body` = '내용1';
