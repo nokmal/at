@@ -32,4 +32,10 @@ public class ArticleService {
 
 		return Util.getAsInt(param.get("id"));
 	}
+	
+	public int writeReply(Map<String, Object> param) {
+		articleDao.writeReply(param);
+
+		return Util.getAsInt(param.get("id"));
+	}
 }
