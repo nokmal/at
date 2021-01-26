@@ -57,6 +57,11 @@ label[for] {
 	min-height: 300px;
 	resize: none;
 }
+
+html>head+body:last-child .height-300 {
+	min-height: 100px;
+}
+
 /* 커스텀 */
 .con {
 	max-width: 1200px;
