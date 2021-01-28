@@ -7,6 +7,7 @@ import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
 import com.example.at.dto.Article;
+import com.example.at.dto.ArticleReply;
 
 @Mapper
 public interface ArticleDao {
@@ -17,4 +18,6 @@ public interface ArticleDao {
 	void write(Map<String, Object> param);
 
 	void writeReply(Map<String, Object> param);
+
+	List<ArticleReply> getForPrintArticleReplies(Map<String, Object> param);
 }
