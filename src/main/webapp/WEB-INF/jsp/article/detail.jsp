@@ -44,7 +44,6 @@
 				articleId : param.id,
 				body : form.body.value
 			}, function(data) {
-				alert(data.msg);
 			}, 'json');
 			form.body.value = '';
 		}
@@ -75,8 +74,6 @@
 </c:if>
 
 <h2 class="con">댓글 리스트</h2>
-
-<button onclick="ArticleReplyList__drawReply()">11</button>
 
 <div class="article-reply-list-box table-box con">
 	<table>
@@ -134,7 +131,7 @@
 		html += '<tr>';
 		html += '<td>' + articleReply.id + '</td>';
 		html += '<td>' + articleReply.regDate + '</td>';
-		html += '<td>' + 11 + '</td>';
+		html += '<td>' + articleReply.extra.writer + '</td>';
 		html += '<td>' + articleReply.body + '</td>';
 		html += '<td>비고</td>';
 		html += '</tr>';
